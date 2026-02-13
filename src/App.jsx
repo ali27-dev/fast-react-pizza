@@ -9,7 +9,6 @@ import CreateOrder from "./features/order/CreateOrder";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <AppLayout />,
     children: [
       { path: "/", element: <Home /> },
