@@ -1,7 +1,7 @@
 function Username() {
   return (
     <div>
-      <p className="text-sm font-semibold">Abid</p>
+      <p className="hidden text-sm font-semibold md:block">Abid</p>
     </div>
   );
 }
