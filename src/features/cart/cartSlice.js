@@ -21,7 +21,7 @@ const cartSlice = createSlice({
       state.cart.push(action.payload);
     },
     deleteItems(state, action) {
-      state.cart.filter((item) => item.pizzaId !== action.payload);
+      state.cart = state.cart.filter((item) => item.pizzaId !== action.payload);
     },
     increaseItemQuantity(state, action) {
       const item = state.cart.find((item) => item.pizzaId === action.payload);
@@ -57,3 +57,6 @@ export const getAddToCarQuantity = (state) =>
 
 export const getAddToCarPrice = (state) =>
   state.cart.cart.reduce((sum, item) => sum + item.totalPrice, 0);
+
+export const getCurrentQuantityById = (id) => (state) =>
+  state.cart.cart.find((item) => item.pizzaId === id)?.quantity ?? 0;
