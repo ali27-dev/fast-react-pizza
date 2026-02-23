@@ -13,7 +13,6 @@ function MenuItem({ pizza }) {
 
   const isInCart = cuurentQuantity > 0;
 
-  console.log(isInCart);
   function handleAddToCart() {
     const newItems = {
       pizzaId: id,
